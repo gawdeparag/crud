@@ -35,7 +35,6 @@ public class ProductService {
 	}
 	
 	public void deleteProduct(int id) {
-		System.out.println("ID----------------->"+id);
 		productRepository.deleteById(id);
 	}
 	
