@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springboot.example.crud.entity.Product;
 import com.springboot.example.crud.service.ProductService;
 
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.media.Content;
-
 @RestController
 @RequestMapping("/api/product")
 public class ProductController {
@@ -60,11 +56,7 @@ public class ProductController {
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	@ApiResponses(value = {
-			@ApiResponse(responseCode = "202", description = "Successfully deleted product", content = @Content(mediaType = "application/json")),
-			@ApiResponse(responseCode = "404", description = "Couldn't find the product")
-	})
-	public void deleteProduct(@PathVariable int id) {
-		productService.deleteProduct(id);
+	public String deleteProduct(@PathVariable int id) {
+		return productService.deleteProduct(id);
 	}
 }
