@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<!--~~(org.springframework.boot:spring-boot-starter-parent failed. Unable to download metadata. Tried repositories:
-https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.apache.org)~~>--><parent>
+https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.apache.org)~~>-->
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.1</version>
@@ -20,12 +21,14 @@ https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.
 	</properties>
 	<dependencies>
 		<!--~~(org.springframework.boot:spring-boot-starter-data-jpa failed. Unable to download metadata. Tried repositories:
-https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.apache.org)~~>--><dependency>
+https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.apache.org)~~>-->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<!--~~(org.springframework.boot:spring-boot-starter-web failed. Unable to download metadata. Tried repositories:
-https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.apache.org)~~>--><dependency>
+https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.apache.org)~~>-->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -41,7 +44,8 @@ https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.
 			<optional>true</optional>
 		</dependency>
 		<!--~~(org.springframework.boot:spring-boot-starter-test failed. Unable to download metadata. Tried repositories:
-https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.apache.org)~~>--><dependency>
+https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.apache.org)~~>-->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -54,6 +58,15 @@ https://repo.maven.apache.org/maven2: java.net.UnknownHostException: repo.maven.
 			<artifactId>swagger-annotations</artifactId>
 			<version>2.2.14</version>
 		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>3.1.2</version>
+		</dependency>
+
 
 	</dependencies>
 
